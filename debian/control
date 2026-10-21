@@ -1,21 +1,24 @@
 Source: wiringpi
 Section: electronics
 Priority: optional
-Maintainer: Ian Jackson <ijackson@chiark.greenend.org.uk>
-Standards-Version: 3.8.0
+Maintainer: WiringPi Maintainers <wiringpi-maintainers@users.noreply.github.com>
+Standards-Version: 4.6.2
 Homepage: https://github.com/WiringPi/WiringPi
-Build-Depends: debhelper (>= 8)
+Build-Depends: debhelper (>= 10)
+Vcs-Git: https://github.com/WiringPi/WiringPi.git
+Vcs-Browser: https://github.com/WiringPi/WiringPi
 
 Package: libwiringpi3
 Section: libs
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: GPIO librariees for Raspberry Pi (runtime).
+Description: GPIO libraries for Raspberry Pi (runtime).
  Runtime for the popular wiringPi library.
 
 Package: wiringpi
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
+Recommends: libwiringpi-dev
 Description: gpio utility for Raspberry Pi
  The wiringPi gpio command line utility, for GPIO access on a
  Raspberry Pi from the command line.
